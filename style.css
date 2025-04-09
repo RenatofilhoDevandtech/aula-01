@@ -1,58 +1,215 @@
-/* Estilização geral */
+/* Estilização Geral */
 body {
-    font-family: 'Georgia', serif;
-    background-color: #f5f5dc; /* Cor de papel */
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(120deg, #74b9ff, #55efc4, #00cec9); /* Gradiente dinâmico inicial */
+    background-size: 400% 400%; /* Amplia o movimento */
+    animation: gradientMove 10s infinite alternate; /* Animação do gradiente */
     color: #333;
     margin: 0;
-    padding: 20px;
-    line-height: 1.6;
+    padding: 0;
+    line-height: 1.8;
+    overflow-x: hidden; /* Evita rolagem lateral */
 }
 
-/* Container centralizado */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Barra de Navegação */
+nav {
+    background-color: rgba(45, 52, 54, 0.8); /* Cinza escuro elegante com transparência */
+    color: #ffffff;
+    padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #00cec9; /* Azul-verde vibrante */
+    color: #2d3436; /* Contraste claro */
+    transform: scale(1.05); /* Efeito de zoom leve */
+}
+
+/* Container Principal */
 main {
-    max-width: 800px;
-    margin: auto;
-    background: white;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: #ffffff;
     padding: 40px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Títulos */
 h1, h2 {
-    font-family: 'Times New Roman', serif;
+    font-family: 'Poppins', sans-serif;
+    color: #2d3436; /* Cinza escuro */
     text-align: center;
     margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 30px;
 }
 
 /* Parágrafos */
 p {
-    text-indent: 30px; /* Recuo de parágrafo */
+    color: #636e72;
     text-align: justify;
+    text-indent: 20px;
+    margin-bottom: 20px;
 }
 
 /* Links */
 a {
-    color: #8b4513; /* Marrom clássico */
+    color: #00cec9; /* Azul vibrante */
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 a:hover {
     text-decoration: underline;
+    color: #0984e3; /* Azul mais profundo */
 }
 
 /* Listas */
 ul {
     padding-left: 40px;
+    margin-bottom: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #2d3436; /* Cinza escuro */
+    color: white;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Bloco de Exercícios */
+.exercise-box {
+    background: #f0faff;
+    border-left: 5px solid #00cec9;
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.exercise-box h4 {
+    margin-top: 0;
+    color: #2d3436;
 }
 
 /* Rodapé */
 footer {
     text-align: center;
-    font-size: 14px;
+    padding: 20px;
+    background: rgba(45, 52, 54, 0.8);
+    color: #ffffff;
     margin-top: 40px;
-    padding: 10px;
-    background: #eee;
-    border-top: 2px solid #ccc;
+    border-top: 5px solid #00cec9;
+    font-size: 14px;
+}
+
+/* Barra de Progresso no Rodapé */
+footer::before {
+    content: "";
+    display: block;
+    width: 80%; /* Simula o progresso de leitura */
+    height: 5px;
+    background: #00cec9;
+    margin: auto;
+    border-radius: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    nav ul li {
+        margin: 5px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    table th, table td {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
 }

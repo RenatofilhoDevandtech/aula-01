@@ -10,11 +10,19 @@
 
 <body>
     <header>
-        <h1>Bem-vindo à Aula 01 - Introdução ao HTML</h1>
+        <nav>
+            <ul>
+                <li><a href="#html">HTML</a></li>
+                <li><a href="#css">CSS</a></li>
+                <li><a href="#javascript">JavaScript</a></li>
+            </ul>
+        </nav>
+        <h1>Bem-vindo ao Guia de Programação</h1>
     </header>
 
     <main>
-        <section>
+        <section id="html">
+            <h2>HTML: A Estrutura da Web</h2>
             <h2>O que é HTML?</h2>
             <p>HTML (HyperText Markup Language) é a linguagem de marcação usada para estruturar páginas web. Ele define elementos como títulos, parágrafos, imagens e links.</p>
         </section>
@@ -68,10 +76,218 @@
                 <li><a href="https://www.youtube.com/watch?v=SV7TL0hxmIQ">Curso de HTML para iniciantes (YouTube)</a></li>
             </ul>
         </section>
+        <section id="css">
+            <h2>CSS: Dando Estilo às Páginas Web</h2>
+            <p>O CSS (Cascading Style Sheets) é usado para estilizar páginas web, permitindo que os desenvolvedores personalizem o visual de um site. É como a maquiagem ou o figurino de uma página, deixando-a bonita e funcional!</p>
+        
+            <h3>O que o CSS pode fazer?</h3>
+            <ul>
+                <li>Alterar as cores de fundo e do texto</li>
+                <li>Definir estilos de fontes (tamanho, tipo, espaçamento entre letras)</li>
+                <li>Criar layouts para organizar o conteúdo na tela</li>
+                <li>Adicionar efeitos visuais, como sombras e transições</li>
+                <li>Tornar o site responsivo, adaptando-o a diferentes tamanhos de tela</li>
+            </ul>
+        
+            <h3>Como adicionar CSS ao HTML?</h3>
+            <p>Existem três formas principais:</p>
+            <ul>
+                <li>
+                    <strong>Estilo Inline:</strong> Estilo diretamente no elemento HTML. Exemplo:
+                    <pre>&lt;p style="color: red;"&gt;Texto vermelho&lt;/p&gt;</pre>
+                </li>
+                <li>
+                    <strong>Estilo Interno:</strong> Dentro de um bloco <code>&lt;style&gt;</code> no cabeçalho do HTML. Exemplo:
+                    <pre>
+        &lt;style&gt;
+            body {
+                background-color: lightblue;
+            }
+        &lt;/style&gt;
+                    </pre>
+                </li>
+                <li>
+                    <strong>Estilo Externo:</strong> Usando um arquivo separado, como <code>styles.css</code>. Exemplo:
+                    <pre>
+        /* Arquivo styles.css */
+        h1 {
+            color: green;
+            font-family: Arial, sans-serif;
+        }
+                    </pre>
+                </li>
+            </ul>
+        
+            <h3>Propriedades mais comuns do CSS:</h3>
+            <p>Estas são algumas das propriedades CSS que você usará frequentemente:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Propriedade</th>
+                        <th>Descrição</th>
+                        <th>Exemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>color</strong></td>
+                        <td>Define a cor do texto</td>
+                        <td><code>color: blue;</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>background-color</strong></td>
+                        <td>Define a cor de fundo</td>
+                        <td><code>background-color: yellow;</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>font-size</strong></td>
+                        <td>Define o tamanho do texto</td>
+                        <td><code>font-size: 20px;</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>margin</strong></td>
+                        <td>Espaço externo ao redor de um elemento</td>
+                        <td><code>margin: 10px;</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>padding</strong></td>
+                        <td>Espaço interno entre o conteúdo e a borda</td>
+                        <td><code>padding: 15px;</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        
+            <h3>Dicas para usar CSS como um profissional:</h3>
+            <ul>
+                <li>Use classes e ids para aplicar estilos específicos.</li>
+                <li>Comente o código para mantê-lo organizado e fácil de entender.</li>
+                <li>Use ferramentas como o "Inspecionar Elemento" do navegador para testar mudanças no CSS.</li>
+                <li>Aplique boas práticas de responsividade para que o site funcione bem em celulares e computadores.</li>
+            </ul>
+        
+            <h3>Exemplo de Layout:</h3>
+            <p>Um exemplo simples para estruturar uma página com CSS:</p>
+            <pre>
+        /* Layout básico */
+        header {
+            background-color: navy;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        main {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px;
+        }
+        
+        footer {
+            background-color: navy;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+            </pre>
+        </section>
+        <section id="javascript">
+            <h2>JavaScript: Tornando as Páginas Interativas</h2>
+            <p>O JavaScript é uma linguagem de programação que dá vida às páginas web. Ele permite que você crie ações dinâmicas, como responder a cliques de botão, exibir mensagens e interagir com o usuário.</p>
+        
+            <h3>Por que JavaScript é importante?</h3>
+            <ul>
+                <li>É essencial para o desenvolvimento web, sendo usado em praticamente todos os sites modernos.</li>
+                <li>Permite criar interatividade e experiências dinâmicas no navegador.</li>
+                <li>É fácil de começar e aprender, mas poderoso o suficiente para projetos complexos.</li>
+            </ul>
+        
+            <h3>Como usar JavaScript?</h3>
+            <p>JavaScript pode ser usado de várias maneiras:</p>
+            <ul>
+                <li>
+                    <strong>Inline:</strong> Adicionando código diretamente no elemento HTML (não é recomendado para projetos maiores).
+                    <pre>&lt;button onclick="alert('Olá, mundo!')"&gt;Clique aqui&lt;/button&gt;</pre>
+                </li>
+                <li>
+                    <strong>Interno:</strong> Dentro de uma tag <code>&lt;script&gt;</code> no arquivo HTML.
+                    <pre>
+        &lt;script&gt;
+            console.log("Bem-vindo ao JavaScript!");
+        &lt;/script&gt;
+                    </pre>
+                </li>
+                <li>
+                    <strong>Externo:</strong> Utilizando um arquivo separado, como <code>script.js</code>.
+                    <pre>
+        // Arquivo script.js
+        function mostrarMensagem() {
+            alert("Você clicou no botão!");
+        }
+                    </pre>
+                    <pre>
+        &lt;button onclick="mostrarMensagem()"&gt;Clique aqui&lt;/button&gt;
+                    </pre>
+                </li>
+            </ul>
+        
+            <h3>Conceitos básicos:</h3>
+            <ul>
+                <li><strong>Variáveis:</strong> Armazenam valores que podem ser usados no código.
+                    <pre>
+        let nome = "João";
+        console.log(nome); // Exibe "João"
+                    </pre>
+                </li>
+                <li><strong>Funções:</strong> Executam uma tarefa específica.
+                    <pre>
+        function somar(a, b) {
+            return a + b;
+        }
+        console.log(somar(2, 3)); // Exibe 5
+                    </pre>
+                </li>
+                <li><strong>Eventos:</strong> Respondem às ações do usuário, como cliques.
+                    <pre>
+        document.getElementById("meuBotao").addEventListener("click", function() {
+            alert("Botão clicado!");
+        });
+                    </pre>
+                </li>
+            </ul>
+        
+            <h3>Manipulação do DOM:</h3>
+            <p>O DOM (Document Object Model) permite que o JavaScript interaja com os elementos HTML.</p>
+            <pre>
+        document.getElementById("meuTexto").innerHTML = "Texto alterado!";
+            </pre>
+            <p>HTML relacionado:</p>
+            <pre>
+        &lt;p id="meuTexto"&gt;Texto original&lt;/p&gt;
+        &lt;button onclick="document.getElementById('meuTexto').innerHTML = 'Texto alterado!'"&gt;Alterar Texto&lt;/button&gt;
+            </pre>
+        
+            <h3>Recursos úteis para aprender JavaScript:</h3>
+            <ul>
+                <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">Documentação Oficial do JavaScript - MDN</a></li>
+                <li><a href="https://www.javascript.com/" target="_blank">Site Oficial do JavaScript</a></li>
+                <li><a href="https://www.w3schools.com/js/" target="_blank">Guia de JavaScript - W3Schools</a></li>
+                <li><a href="https://www.codecademy.com/learn/introduction-to-javascript" target="_blank">Curso Interativo de JavaScript - Codecademy</a></li>
+                <li><a href="https://www.freecodecamp.org/portuguese/news/aprendendo-javascript-basico/" target="_blank">Guia de JavaScript Básico - FreeCodeCamp</a></li>
+            </ul>
+        
+            <h3>Dicas para iniciantes:</h3>
+            <ul>
+                <li>Comece com projetos pequenos, como uma calculadora ou um jogo simples.</li>
+                <li>Pratique diariamente para consolidar seu aprendizado.</li>
+                <li>Use o console do navegador para testar e depurar seu código.</li>
+                <li>Explore frameworks e bibliotecas como React e Vue.js após entender o básico.</li>
+            </ul>
+        </section>        
+    
     </main>
 
     <footer>
-        <p>&copy; 2025 Aula 01 - Todos os direitos reservados</p>
+        <p>&copy; 2025 Renato Filho - Todos os direitos reservados</p>
     </footer>
 </body>
 
