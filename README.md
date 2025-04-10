@@ -45,7 +45,7 @@ Cada seção inclui exemplos claros, links úteis e um design que facilita a vis
 
 1. **Clone ou Baixe o Repositório**:
    ```bash
-   git clone https://github.com/seuprojeto/guia-web-iniciante.git
+   https://github.com/RenatofilhoDevandtech/aula-01.git
 
 2.Abra no Navegador:
 
